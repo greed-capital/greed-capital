@@ -16,7 +16,7 @@
     "preinstall": "node ./bin/nestedInstall.js",
     "postinstall": "ln -sfn ../src ./node_modules/app",
     "watch": "TARGET=development webpack-dev-server --config config/webpack.js --hot --no-info --progress --host 0.0.0.0 --env.devServer --open --content-base src/",
-    "precommit": "lint-staged && npm run build && git add -A",
+    "precommit": "lint-staged && npm run build && npm run copy-public && git add -A",
     "postcheckout": "track-changed checkout",
     "postmerge": "track-changed merge",
     "postrewrite": "track-changed rewrite"
