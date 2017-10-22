@@ -35,7 +35,6 @@ if (release) {
 // pre
 console.log("→ removing public")
 fs.removeSync("./public")
-fs.removeSync("./docs")
 
 if (target === "nope") {
   return

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "gen": "node ./bin/gen",
-    "clean": "rm -rf public && rm -rf docs",
+    "clean": "rm -rf public",
     "commitmsg": "validate-commit-msg",
     "copy-assets": "mkdir -p public && cp -R src/assets public",
     "copy-public": "mkdir -p docs && cp -R public/** docs",
