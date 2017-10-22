@@ -4,7 +4,7 @@ let path = require("path")
 let { execSync } = require("child_process")
 
 let argv = minimist(process.argv.slice(2))
-let exec = (cmd) => execSync(cmd, { stdio: [ 0, 1, 2 ] })
+let exec = cmd => execSync(cmd, { stdio: [0, 1, 2] })
 
 let targetMap = {
   dev: "development",
@@ -35,6 +35,7 @@ if (release) {
 // pre
 console.log("→ removing public")
 fs.removeSync("./public")
+fs.removeSync("./docs")
 
 if (target === "nope") {
   return

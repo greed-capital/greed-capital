@@ -13,9 +13,10 @@ class IndexPage extends Component {
   render() {
     return h(".IndexPage", [
       h("h1.logo", { title: "Greed" }),
-      h("h2.tagline", [
-        "From the first day to this, sheer greed was the driving spirit of civilization.",
-      ]),
+      h("h2.tagline", {
+        title:
+          "From the first day to this, sheer greed was the driving spirit of civilization.",
+      }),
       h("footer.footer", [
         h(".left", ["Coming to iPhone soon"]),
         h(".right", [

@@ -1,5 +1,4 @@
 **/node_modules/*
-/bin
-/assets
-/ignore
-/public
+**/dist/*
+**/public/*
+**/docs/*

@@ -5,13 +5,23 @@
   align-items: center;
   min-height: 100vh;
   padding: 6rem 4rem;
+  position: relative;
 }
 
 .tagline {
-  @mixin grotesque;
-  font-size: 6rem;
-  line-height: 7.5rem;
-  font-weight: 300;
+  // @mixin grotesque;
+  // font-size: 6rem;
+  // line-height: 7.5rem;
+  // font-weight: 300;
+
+  height: 22.5rem;
+  width: 100%;
+  max-width: 78rem;
+
+  background-image: url(./img/tagline.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo {
@@ -47,5 +57,18 @@
   .right {
     flex: 1;
     text-align: right;
+  }
+}
+
+.linksList {
+  display: flex;
+  justify-content: flex-end;
+
+  .link {
+    &:not(:last-child) {
+      &:after {
+        content: "   ·   ";
+      }
+    }
   }
 }

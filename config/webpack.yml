@@ -5,7 +5,7 @@ default: &default
   globals:
     devServerPort: 4000
     srcScriptsDir: "./src"
-    buildScriptsDir: "./"
+    buildScriptsDir: "./public"
 
   prerender: true
 
