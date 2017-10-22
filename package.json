@@ -1,0 +1,68 @@
+{
+  "name": "@greed/main-site",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "gen": "node ./bin/gen",
+    "clean": "rm -rf assets && rm -f index.html && rm -f manifest.json",
+    "commitmsg": "validate-commit-msg",
+    "copy-assets": "cp -R src/assets ./",
+    "cz": "git-cz",
+    "lint": "eslint \"**/*.{js,ts,jsx,tsx}\"",
+    "format": "prettier --write \"**/*.{js,ts,jsx,tsx}\" && eslint --fix \"**/*.{js,ts,jsx,tsx}\"",
+    "build": "node ./bin/build.js",
+    "postbuild": "npm run copy-assets",
+    "preinstall": "node ./bin/nestedInstall.js",
+    "postinstall": "ln -sfn ../src ./node_modules/app",
+    "watch": "TARGET=development webpack-dev-server --config config/webpack.js --hot --no-info --progress --host 0.0.0.0 --env.devServer --open --content-base src/",
+    "precommit": "lint-staged",
+    "postcheckout": "track-changed checkout",
+    "postmerge": "track-changed merge",
+    "postrewrite": "track-changed rewrite"
+  },
+  "dependencies": {
+    "@bruitt/app-entry": "^4.0.9",
+    "@bruitt/commit": "^1.0.0",
+    "@bruitt/eslint-config-lint-app": "^3.0.9",
+    "@bruitt/eslint-config-lint-base": "^3.0.9",
+    "@bruitt/webpack-builder": "4.0.9",
+    "axios": "^0.15.2",
+    "date-fns": "^1.28.5",
+    "fs-extra": "^4.0.2",
+    "history": "^4.3.0",
+    "husky": "^0.13.1",
+    "in-view": "^0.6.1",
+    "jump.js": "^1.0.2",
+    "minimist": "^1.2.0",
+    "nodemon": "^1.11.0",
+    "prop-types": "^15.5.10",
+    "query-string": "^4.3.2",
+    "ramda": "^0.24.1",
+    "react-addons-css-transition-group": "^15.4.1",
+    "react-responsive": "^1.1.5",
+    "require-yaml": "^0.0.1",
+    "track-changed": "^1.0.2",
+    "url-pattern": "^1.0.3",
+    "webpack-bundle-size-analyzer": "^2.5.0"
+  },
+  "babel": {
+    "presets": [
+      "@bruitt/webpack-builder/babel"
+    ]
+  },
+  "track-changed": {
+    "yarn.lock": "yarn"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

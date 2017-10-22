@@ -1,0 +1,107 @@
+@import "../../styles/common.pcss";
+
+.Heading {
+}
+
+.-spacing {
+  &-none {
+    margin: 0;
+  }
+  &-base {
+    margin: 1rem 0;
+  }
+  &-half {
+    margin: 0.5em 0;
+  }
+  &-full {
+    margin: 1em 0;
+  }
+}
+
+.-level {
+  &-1 {
+    font-size: 4rem;
+    line-height: 5rem;
+
+    @media (--narrow) {
+      body:not(:global(.force-desktop)) & {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    }
+  }
+  &-2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+
+    @media (--narrow) {
+      body:not(:global(.force-desktop)) & {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &-3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    @media (--narrow) {
+      body:not(:global(.force-desktop)) & {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+  &-4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  &-5 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  &-6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  &-7 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.-weight {
+  &-light {
+    font-weight: 300;
+  }
+  &-regular {
+    font-weight: 400;
+  }
+  &-medium {
+    font-weight: $medium;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+  &-black {
+    font-weight: 900;
+  }
+}
+
+.-uppercase {
+  // @mixin sansSerif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.-align {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+}

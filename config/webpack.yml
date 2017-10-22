@@ -1,0 +1,31 @@
+default: &default
+  entries:
+    index: "./src/entries/Landing"
+
+  globals:
+    devServerPort: 4000
+    srcScriptsDir: "./src"
+    buildScriptsDir: "./"
+
+  prerender: true
+
+  images: true
+
+  styles:
+    localIdentName: "grd-[name]-[local]"
+
+  htmls:
+    template: "./src/templates/index.html"
+
+development:
+  <<: *default
+
+production: &production
+  <<: *default
+
+  alias:
+    "react": "preact-compat"
+    "react-dom": "preact-compat"
+
+staging:
+  <<: *production

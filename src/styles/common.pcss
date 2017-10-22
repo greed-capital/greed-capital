@@ -1,0 +1,50 @@
+$bgBlack: #000000;
+$fgWhite: #FFFFFF;
+$orangeRed: #F5481D;
+
+$primary: $orangeRed;
+
+// -------------
+
+$medium: 500;
+
+// -------------
+
+@define-mixin grotesque {
+  font-family: Gerbera, "Gill Sans", -apple-system, Roboto, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+@define-mixin sansSerif {
+  font-family: -apple-system, Roboto, "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+@custom-media --wide (min-width: 1024px);
+@custom-media --narrow (max-width: 1023px);
+
+@define-mixin narrow {
+  @media (--narrow) {
+    [data-view="responsive"] & {
+      @mixin-content;
+    }
+  }
+}
+
+@define-mixin wide {
+  @media (--wide) {
+    @mixin-content;
+  }
+
+  [data-view="desktop"] & {
+    @mixin-content;
+  }
+}
+
+// https://github.com/pixelass/beneath-the-sun
+$gUnderground: -1;
+$gSea: 0;
+$gLand: 1;
+$gHill: 10;
+$gMountain: 30;
+$gCloud: 50;
+$gMoon: 100;
+$gSun: 200;

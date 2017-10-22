@@ -1,0 +1,51 @@
+@import "../../styles/common.pcss";
+
+.IndexPage {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 6rem 4rem;
+}
+
+.tagline {
+  @mixin grotesque;
+  font-size: 6rem;
+  line-height: 7.5rem;
+  font-weight: 300;
+}
+
+.logo {
+  height: 2rem;
+  width: 5.75rem;
+  background-image: url(./img/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  width: 100%;
+  padding: 2rem 4rem;
+
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+    text-align: right;
+  }
+}
