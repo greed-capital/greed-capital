@@ -18,7 +18,9 @@ class IndexPage extends Component {
           "From the first day to this, sheer greed was the driving spirit of civilization.",
       }),
       h("footer.footer", [
-        h(".left", ["Coming to iPhone soon"]),
+        h(".left", [
+          "Simple investing in digital currencies is coming soon to iPhone",
+        ]),
         h(".right", [
           h("ul.linksList", [
             h("li.link", [
@@ -34,7 +36,7 @@ class IndexPage extends Component {
                   target: "_blank",
                   rel: "noopener norefferer",
                 },
-                ["Twitter"],
+                [ "Twitter" ],
               ),
             ]),
           ]),

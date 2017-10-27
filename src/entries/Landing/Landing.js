@@ -10,11 +10,11 @@ import { AppContainer } from "react-hot-loader"
 import "./LandingStyles.pcss"
 import rootApp from "./LandingApp"
 
-let wrapAppComponent = app => {
+let wrapAppComponent = (app) => {
   return h(AppContainer, {}, h(app))
 }
 
-let renderAppComponent = root => app => {
+let renderAppComponent = (root) => (app) => {
   let wrappedComponent = wrapAppComponent(app)
   renderDom(wrappedComponent, root)
 }

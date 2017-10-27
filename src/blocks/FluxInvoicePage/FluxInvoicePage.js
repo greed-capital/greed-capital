@@ -29,36 +29,18 @@ class FluxInvoicePage extends Component {
     return h(".FluxInvoicePage", [
       h("p.email", [
         "Email: ",
-        h("a", { href: "mailto:morhetz@gmail.com" }, [
-          "morhetz@gmail.com",
-        ]),
+        h("a", { href: "mailto:morhetz@gmail.com" }, [ "morhetz@gmail.com" ]),
       ]),
       h("h3.name", [ "Account holder name in Cyrillic " ]),
-      h("p.lastName", [
-        "Last name: Перцев",
-      ]),
-      h("p.firstName", [
-        "First name: Павел",
-      ]),
-      h("p.patronymicName", [
-        "Patronymic name: Сергеевич",
-      ]),
+      h("p.lastName", [ "Last name: Перцев" ]),
+      h("p.firstName", [ "First name: Павел" ]),
+      h("p.patronymicName", [ "Patronymic name: Сергеевич" ]),
       h("h3.name", [ "Bank details" ]),
-      h("p.bankName", [
-        "Bank name: ТОЧКА ПАО БАНКА \"ФК ОТКРЫТИЕ\"",
-      ]),
-      h("p.accountNumber", [
-        "Account number: 40817810610500000525",
-      ]),
-      h("p.bik", [
-        "BIK (Bank Code): 044525999",
-      ]),
-      h("p.region", [
-        "Region: Moscow",
-      ]),
-      h("p.inn", [
-        "INN (Taxpayer Identification Number): 290221784772",
-      ]),
+      h("p.bankName", [ "Bank name: ТОЧКА ПАО БАНКА \"ФК ОТКРЫТИЕ\"" ]),
+      h("p.accountNumber", [ "Account number: 40817810610500000525" ]),
+      h("p.bik", [ "BIK (Bank Code): 044525999" ]),
+      h("p.region", [ "Region: Moscow" ]),
+      h("p.inn", [ "INN (Taxpayer Identification Number): 290221784772" ]),
       h("p.corrAccount", [
         "Correspondent account number: 30101810845250000999",
       ]),

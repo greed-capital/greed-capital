@@ -12,9 +12,7 @@ let propDefs = {
     type: PropTypes.string,
     mod: true,
   },
-  children: {
-
-  },
+  children: {},
   className: {
     type: PropTypes.string,
   },
@@ -51,10 +49,13 @@ export default class Heading extends Component {
     let { children, className, tag } = this.props
     let mods = sanitizeMods(propDefs)(this.props)
 
-    return h(`${tag}.Heading`, {
-      className, mods,
-    }, [
-      children,
-    ])
+    return h(
+      `${tag}.Heading`,
+      {
+        className,
+        mods,
+      },
+      [ children ],
+    )
   }
 }
