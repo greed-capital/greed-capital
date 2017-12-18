@@ -7,7 +7,6 @@
     "clean": "rm -rf public",
     "commitmsg": "validate-commit-msg",
     "copy-assets": "mkdir -p public && cp -R src/assets public",
-    "copy-public": "mkdir -p docs && cp -R public/** docs",
     "cz": "git-cz",
     "lint": "eslint \"**/*.{js,ts,jsx,tsx}\"",
     "format": "prettier --write \"**/*.{js,ts,jsx,tsx}\" && eslint --fix \"**/*.{js,ts,jsx,tsx}\"",
@@ -16,7 +15,7 @@
     "preinstall": "node ./bin/nestedInstall.js",
     "postinstall": "ln -sfn ../src ./node_modules/app",
     "watch": "TARGET=development webpack-dev-server --config config/webpack.js --hot --no-info --progress --host 0.0.0.0 --env.devServer --open --content-base src/",
-    "precommit": "lint-staged && npm run build && npm run copy-public && git add -A",
+    "precommit": "lint-staged",
     "postcheckout": "track-changed checkout",
     "postmerge": "track-changed merge",
     "postrewrite": "track-changed rewrite"
