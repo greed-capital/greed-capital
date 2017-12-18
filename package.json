@@ -18,7 +18,8 @@
     "precommit": "lint-staged",
     "postcheckout": "track-changed checkout",
     "postmerge": "track-changed merge",
-    "postrewrite": "track-changed rewrite"
+    "postrewrite": "track-changed rewrite",
+    "test": "node test.js"
   },
   "dependencies": {
     "@bruitt/app-entry": "^4.0.9",
